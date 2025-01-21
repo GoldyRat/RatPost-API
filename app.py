@@ -4,6 +4,10 @@ from backend.tools import *
 
 app = Flask(__name__)
 
+@app.route('/', methods = ['POST'])
+def home():
+    return jsonify({'message': 'Hello, World!'})
+
 @app.route('/signup', methods=['POST'])
 def signup():
     # Get the user's input
